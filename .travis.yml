@@ -1,5 +1,7 @@
 sudo: required
 language: node_js
+node_js:
+  - 7
 services:
   - docker
 before-install:
@@ -16,3 +18,4 @@ deploy:
   bucket_path: "docker-react-test"
   on:
     branch: master
+    password: "Hd0iTbTkoAbpe912n2yFO51wh7X2LlYlk/1Fd2Nj"
