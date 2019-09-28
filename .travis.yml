@@ -1,5 +1,5 @@
-language: node_js
 sudo: required
+language: node_js
 services:
   - docker
 before-install:
@@ -7,3 +7,12 @@ before-install:
 
 scriptes:
   - docker run IMG1
+deploy:
+  provider: elasticbeanstalk
+  region:  "eu-west-1"
+  app: "docker-react-test"
+  env: "DockerReactTest-env"
+  bucket_name: "elasticbeanstalk-eu-west-1-021160874513"
+  bucket_path: "docker-react-test"
+  on:
+    branch: master
